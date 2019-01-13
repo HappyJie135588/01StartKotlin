@@ -1,0 +1,13 @@
+package com.example.kotlin.a01startkotlin.bird
+
+class Hen(name: String = "鸡", sex: Int = FEMALE, voice: String = "喔喔喔") : Chicken(name, sex, voice) {
+    override fun callOut(times: Int): String {
+        var count = when {
+            //when语句判断大小和小于时,要把完整的判断条件写到每个分支中
+            times <= 0 -> 0
+            times >= 10 -> 9
+            else -> times
+        }
+        return "$sexName$name${voice}叫了${numberArray[count]}声,原来它下蛋了呀."
+    }
+}

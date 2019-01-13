@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kotlin.a01startkotlin">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".EasyActivity" />
+        <activity android:name=".JavaActivity" />
+        <activity android:name=".class02.VariableActivity" />
+        <activity android:name=".class02.ArrayActivity" />
+        <activity android:name=".class02.StringActivity" />
+        <activity android:name=".class02.SetOfActivity" />
+        <activity android:name=".class02.ListOfActivity" />
+        <activity android:name=".class02.MapOfActivity" />
+        <activity android:name=".class03.ConditionActivity" />
+        <activity android:name=".class03.RepeatActivity" />
+        <activity android:name=".class03.NullActivity" />
+        <activity android:name=".class03.EqualActivity" />
+        <activity android:name=".TestJavaActivity" />
+        <activity android:name=".class04.FunctionActivity" />
+        <activity android:name=".class04.ParamActivity" />
+        <activity android:name=".class04.SpecialActivity" />
+        <activity android:name=".class04.SystemActivity" />
+        <activity android:name=".class05.ClassActivity" />
+        <activity android:name=".class05.MemberActivity" />
+        <activity android:name=".class05.InheritActivity" />
+        <activity android:name=".class05.SecretActivity" />
+        <activity android:name=".class06.view.ButtonClickActivity" />
+        <activity android:name=".class06.view.CheckboxActivity" />
+        <activity android:name=".class06.view.RadioButtonActivity" />
+        <activity android:name=".class06.view.LinearLayoutActivity" />
+        <activity android:name=".class06.view.RelativeLayoutActivity" />
+        <activity android:name=".class06.view.ConstraintLayoutActivity" />
+        <activity android:name=".class06.view.TextMarqueeActivity" />
+        <activity android:name=".class06.view.ImageScaleActivity" />
+        <activity android:name=".class06.view.EditTextActivity" />
+        <activity android:name=".class06.activity.ActFirstActivity" />
+        <!-- 默认的启动模式 -->
+        <activity
+            android:name=".class06.activity.ActSecondActivity"
+            android:launchMode="standard" />
+        <activity android:name=".class06.activity.ParcelableFirstActivity" />
+        <activity android:name=".class06.activity.ParcelableSecondActivity" />
+        <activity android:name=".class06.activity.ActRequestActivity" />
+        <activity android:name=".class06.activity.ActResponseActivity" />
+        <activity android:name=".class06.AlertDialogActivity" />
+        <activity android:name=".class06.LoginPageActivity" />
+        <activity android:name=".class06.LoginForgetActivity" />
+        <activity android:name=".class07.SpinnerDialogActivity" />
+        <activity android:name=".class07.ListViewActivity" />
+        <activity android:name=".class07.GridViewActivity" />
+        <activity android:name=".class07.RecyclerLinearActivity" />
+        <activity android:name=".class07.widget.RecyclerGridActivity">
+
+        </activity>
+        <activity android:name=".class07.RecyclerStaggeredActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
