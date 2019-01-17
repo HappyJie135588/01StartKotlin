@@ -73,11 +73,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".class07.materialdesign.CollapsePinActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".class07.materialdesign.ScrollAlipayActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".class07.ViewPagerActivity" />
+        <activity android:name=".class07.FragmentDynamicActivity" />
+        <activity
+            android:name=".class07.materialdesign.TabLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -85,7 +88,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".class07.materialdesign.TabLayoutActivity" />
     </application>
 
 </manifest>

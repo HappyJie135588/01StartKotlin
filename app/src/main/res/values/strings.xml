@@ -3,4 +3,8 @@
     <string name="title_activity_coordinator">CoordinatorActivity</string>
 
     <string name="toolbar_name">欢乐中国年</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="book_name">Android Studio开发实战\n从零基础到App上线</string>
 </resources>
