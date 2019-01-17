@@ -81,10 +81,8 @@
         <activity android:name=".class07.FragmentDynamicActivity" />
         <activity
             android:name=".class07.materialdesign.TabLayoutActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".class07.BroadTempActivity">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".class07.BroadTempActivity" />
         <!--
         <receiver android:name=".receiver.BootCompletedRecever">
             <intent-filter>
@@ -92,10 +90,15 @@
             </intent-filter>
         </receiver>
         -->
-        <activity android:name=".class07.BroadSystemActivity">
+        <activity android:name=".class07.BroadSystemActivity"></activity>
+        <activity android:name=".class07.SwipeRecyclerActivity">
+
+        </activity>
+        <activity
+            android:name=".class07.DepartmentChannelActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
