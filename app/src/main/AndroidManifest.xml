@@ -56,16 +56,36 @@
         <activity android:name=".class07.ListViewActivity" />
         <activity android:name=".class07.GridViewActivity" />
         <activity android:name=".class07.RecyclerLinearActivity" />
-        <activity android:name=".class07.widget.RecyclerGridActivity">
+        <activity android:name=".class07.RecyclerGridActivity" />
+        <activity android:name=".class07.RecyclerStaggeredActivity" />
+        <activity
+            android:name=".class07.materialdesign.CoordinatorActivity"
+            android:label="@string/title_activity_coordinator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".class07.materialdesign.ToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".class07.materialdesign.AppbarRecyclerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".class07.materialdesign.AppbarNestedActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".class07.materialdesign.CollapsePinActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".class07.RecyclerStaggeredActivity">
+        <activity
+            android:name=".class07.materialdesign.ScrollAlipayActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".class07.materialdesign.TabLayoutActivity" />
     </application>
 
 </manifest>

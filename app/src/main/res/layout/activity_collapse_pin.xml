@@ -1,0 +1,41 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_title"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/blue_light">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ctl_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed|enterAlwaysCollapsed|snap"
+            app:title="@string/toolbar_name">
+            <!--CollapsingToolbarLayout完全折叠后的背景颜色。
+            通常设置为：app:contentScrim=”?attr/colorPrimary”，这样当CollapsingToolbarLayout完全折叠后就会显示主题颜色。-->
+            <!--expandedTitleMarginStart:布局张开的时候title与左边的距离-->
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tl_title"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/red"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

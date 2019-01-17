@@ -19,7 +19,19 @@ buildscript {
 }
 
 ext {
+    compileSdkVersion = 27
+    minSdkVersion = 17
+    targetSdkVersion = 27
+    versionCode = 1
+    versionName = "1.0"
+    //指定Kotlin插件的版本，这里是Android Studio 3.0.1默认的1.1.51
+    kotlin_version = "1.2.0"//指定Kotlin的编译版本号
+    anko_version = "0.10.4"//指定Anko库的版本号
     supportVersion = "27.0.0"
+    constraintLayoutVersion = "1.0.2"
+    junitVersion = "4.12"
+    runnerVersion = "0.5"
+    espressoCoreVersion = "2.2.2"
 }
 
 allprojects {
