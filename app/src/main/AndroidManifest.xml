@@ -81,7 +81,18 @@
         <activity android:name=".class07.FragmentDynamicActivity" />
         <activity
             android:name=".class07.materialdesign.TabLayoutActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".class07.BroadTempActivity">
+
+        </activity>
+        <!--
+        <receiver android:name=".receiver.BootCompletedRecever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        -->
+        <activity android:name=".class07.BroadSystemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
