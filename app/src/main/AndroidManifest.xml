@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kotlin.a01startkotlin">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:allowBackup="true"
@@ -50,7 +53,7 @@
         <activity android:name=".class06.activity.ActRequestActivity" />
         <activity android:name=".class06.activity.ActResponseActivity" />
         <activity android:name=".class06.AlertDialogActivity" />
-        <activity android:name=".class06.LoginPageActivity" />
+        <activity android:name=".class06.LoginPageActivity"></activity>
         <activity android:name=".class06.LoginForgetActivity" />
         <activity android:name=".class07.SpinnerDialogActivity" />
         <activity android:name=".class07.ListViewActivity" />
@@ -90,13 +93,16 @@
             </intent-filter>
         </receiver>
         -->
-        <activity android:name=".class07.BroadSystemActivity"></activity>
-        <activity android:name=".class07.SwipeRecyclerActivity">
-
-        </activity>
+        <activity android:name=".class07.BroadSystemActivity" />
+        <activity android:name=".class07.SwipeRecyclerActivity" />
         <activity
             android:name=".class07.DepartmentChannelActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".class08.ShareWriteActivity" />
+        <activity android:name=".class08.ShareReadActivity" />
+        <activity android:name=".class08.SQLiteWriteActivity" />
+
+        <activity android:name=".class08.LoginSQLiteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,25 +1,25 @@
-package com.example.kotlin.a01startkotlin.class06
+package com.example.kotlin.a01startkotlin.class08
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import com.example.kotlin.a01startkotlin.R
-import com.example.kotlin.a01startkotlin.util.Preference
+import com.example.kotlin.a01startkotlin.class06.LoginForgetActivity
+import com.example.kotlin.a01startkotlin.class08.bean.UserInfo
+import com.example.kotlin.a01startkotlin.database.UserDBHelper
+import com.example.kotlin.a01startkotlin.util.DateUtil
 import com.example.kotlin.a01startkotlin.util.ViewUtil
-import kotlinx.android.synthetic.main.activity_login_page.*
+import kotlinx.android.synthetic.main.activity_login_sqlite.*
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.startActivityForResult
 import org.jetbrains.anko.toast
 
-class LoginPageActivity : AppCompatActivity() {
-    private val TAG = "LoginPageActivity"
-    private var phone: String by Preference(this, "phone", "")
-    private var password: String by Preference(this, "password", "")
+class LoginSQLiteActivity : AppCompatActivity() {
+    lateinit var mHelper: UserDBHelper
     private val mRequestCode = 0
     private var bRemember = false
     private var mPassword = "111111"
@@ -27,14 +27,22 @@ class LoginPageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_page)
+        setContentView(R.layout.activity_login_sqlite)
         rg_login.setOnCheckedChangeListener { group, checkedId -> resetHint(checkedId) }
         ck_remember.setOnCheckedChangeListener { buttonView, isChecked -> bRemember = isChecked }
         et_phone.addTextChangedListener(HideTextWatcher(et_phone))
+        et_password.addTextChangedListener(HideTextWatcher(et_password))
         btn_forget.setOnClickListener { doForget() }
         btn_login.setOnClickListener { doLogin() }
-        et_phone.setText(phone)
-        et_password.setText(password)
+
+        mHelper = UserDBHelper.getInstance(this)
+        et_password.setOnFocusChangeListener { v, hasFocus ->
+            val phone: String = et_phone.text.toString()
+            if (phone.isNotEmpty() && hasFocus) {
+                val info = mHelper.queryByPhone(phone)
+                et_password.setText(info.password)
+            }
+        }
     }
 
     private fun resetHint(checkedId: Int) {
@@ -52,73 +60,60 @@ class LoginPageActivity : AppCompatActivity() {
     }
 
     private inner class HideTextWatcher(private val mView: EditText) : TextWatcher {
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        private val mMaxLength: Int = ViewUtil.getMaxLength(mView)
+        private var mStr: CharSequence? = null
+
+        override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+
+        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+            mStr = s
         }
 
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-        }
-
-        override fun afterTextChanged(s: Editable?) {
-            if (s.toString().trim().length == ViewUtil.getMaxLength(mView)) {
-                ViewUtil.hideOneInputMethod(this@LoginPageActivity, mView)
+        override fun afterTextChanged(s: Editable) {
+            if (mStr.isNullOrEmpty())
+                return
+            if (mStr!!.length == 11 && mMaxLength == 11 || mStr!!.length == 6 && mMaxLength == 6) {
+                ViewUtil.hideOneInputMethod(this@LoginSQLiteActivity, mView)
             }
         }
-
     }
 
     private fun doForget() {
-        val phone = et_phone.text.toString().trim()
-        if (phone.length < ViewUtil.getMaxLength(et_phone)) {
+        val phone = et_phone.text.toString()
+        if (phone.isBlank() || phone.length < 11) {
             toast("请输入正确的手机号")
             return
         }
-
         if (rb_password.isChecked) {
-            startActivityForResult<LoginForgetActivity>(mRequestCode, Pair("phone", phone))
+            startActivityForResult<LoginForgetActivity>(mRequestCode, "phone" to phone)
         } else if (rb_verifycode.isChecked) {
             mVerifyCode = String.format("%06d", (Math.random() * 1000000 % 1000000).toInt())
             alert("手机号$phone，本次验证码是$mVerifyCode，请输入验证码", "请记住验证码") {
-                positiveButton("好的") { }
+                positiveButton("好的") {  }
             }.show()
         }
-
     }
 
     private fun doLogin() {
-        val phone = et_phone.text.toString().trim()
-        if (phone.length < ViewUtil.getMaxLength(et_phone)) {
+        val phone = et_phone.text.toString()
+        if (phone.isBlank() || phone.length < 11) {
             toast("请输入正确的手机号")
             return
         }
-
         if (rb_password.isChecked) {
-            val password = et_password.text.toString().trim()
-            if (mPassword != password) {
+            if (et_password.text.toString() != mPassword) {
                 toast("请输入正确的密码")
+                return
             } else {
                 loginSuccess()
             }
         } else if (rb_verifycode.isChecked) {
-            val verifyCode = et_password.text.toString().trim()
-            if (mVerifyCode != verifyCode) {
+            if (et_password.text.toString() != mVerifyCode) {
                 toast("请输入正确的验证码")
+                return
             } else {
                 loginSuccess()
             }
-        }
-    }
-
-    private fun loginSuccess() {
-        alert("您的手机号码是${et_phone.text}，恭喜你通过登录验证，点击“确定”按钮返回上个页面", "登录成功") {
-            positiveButton("确定返回") {
-                finish()
-            }
-            negativeButton("我再看看") {
-            }
-        }.show()
-        if (bRemember) {
-            phone = et_phone.text.toString()
-            password = et_password.text.toString()
         }
     }
 
@@ -129,4 +124,22 @@ class LoginPageActivity : AppCompatActivity() {
         }
     }
 
+    //从修改密码页面返回登录页面，要清空密码的输入框
+    override fun onRestart() {
+        et_password.setText("")
+        super.onRestart()
+    }
+
+    private fun loginSuccess() {
+        alert("您的手机号码是${et_phone.text}，恭喜你通过登录验证，点击“确定”按钮返回上个页面", "登录成功") {
+            positiveButton("确定返回") { finish() }
+            negativeButton("我再看看") {  }
+        }.show()
+        if (bRemember) {
+            val info = UserInfo(phone = et_phone.text.toString(),
+                    password = et_password.text.toString(),
+                    update_time = DateUtil.nowDateTime)
+            mHelper.insert(info)
+        }
+    }
 }
