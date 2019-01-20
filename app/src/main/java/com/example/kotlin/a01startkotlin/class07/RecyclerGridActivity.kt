@@ -1,7 +1,7 @@
 package com.example.kotlin.a01startkotlin.class07
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
 import com.example.complex.adapter.RecyclerGridAdapter

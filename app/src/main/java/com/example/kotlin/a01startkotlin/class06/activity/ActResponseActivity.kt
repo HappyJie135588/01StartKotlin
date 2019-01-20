@@ -2,8 +2,8 @@ package com.example.kotlin.a01startkotlin.class06.activity
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.example.kotlin.a01startkotlin.R
 import com.example.kotlin.a01startkotlin.bean.MessageInfo
 import com.example.kotlin.a01startkotlin.util.DateUtil

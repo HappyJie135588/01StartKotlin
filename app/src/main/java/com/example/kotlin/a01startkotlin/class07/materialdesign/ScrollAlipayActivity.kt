@@ -1,12 +1,9 @@
 package com.example.kotlin.a01startkotlin.class07.materialdesign
 
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.graphics.Color
-import android.opengl.Visibility
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.AppBarLayout
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.util.Log
 import android.view.View

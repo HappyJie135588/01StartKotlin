@@ -1,9 +1,12 @@
 package com.example.kotlin.a01startkotlin.class04
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.example.kotlin.a01startkotlin.R
-import com.example.kotlin.a01startkotlin.util.*
+import com.example.kotlin.a01startkotlin.util.appendString
+import com.example.kotlin.a01startkotlin.util.factorial
+import com.example.kotlin.a01startkotlin.util.findFixPoint
+import com.example.kotlin.a01startkotlin.util.maxCustom
 import kotlinx.android.synthetic.main.activity_special.*
 
 class SpecialActivity : AppCompatActivity() {

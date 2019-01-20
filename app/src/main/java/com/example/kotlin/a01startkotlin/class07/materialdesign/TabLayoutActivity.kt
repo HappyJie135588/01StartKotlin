@@ -1,9 +1,9 @@
 package com.example.kotlin.a01startkotlin.class07.materialdesign
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
+import android.support.v7.app.AppCompatActivity
 import com.example.kotlin.a01startkotlin.R
 import com.example.kotlin.a01startkotlin.class07.adapter.GoodsPagerAdapter
 import kotlinx.android.synthetic.main.activity_tab_layout.*

@@ -1,11 +1,10 @@
 package com.example.kotlin.a01startkotlin.class06
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import com.example.kotlin.a01startkotlin.R

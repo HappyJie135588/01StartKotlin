@@ -3,7 +3,6 @@ package com.example.kotlin.a01startkotlin.class07.adapter
 import android.content.Context
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
-import android.text.Layout
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView

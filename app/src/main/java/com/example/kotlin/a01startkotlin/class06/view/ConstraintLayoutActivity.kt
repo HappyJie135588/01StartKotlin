@@ -1,10 +1,10 @@
 package com.example.kotlin.a01startkotlin.class06.view
 
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.support.constraint.ConstraintSet
+import android.support.v7.app.AppCompatActivity
 import android.transition.TransitionManager
 import android.widget.TextView
 import com.example.kotlin.a01startkotlin.R

@@ -1,8 +1,7 @@
 package com.example.kotlin.a01startkotlin.class06
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
 import com.example.kotlin.a01startkotlin.R
 import kotlinx.android.synthetic.main.activity_alert_dialog.*
 import org.jetbrains.anko.alert

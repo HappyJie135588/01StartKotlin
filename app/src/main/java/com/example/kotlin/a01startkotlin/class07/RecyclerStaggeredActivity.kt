@@ -1,7 +1,7 @@
 package com.example.kotlin.a01startkotlin.class07
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.widget.ImageView
@@ -10,7 +10,6 @@ import android.widget.TextView
 import com.example.complex.widget.SpacesItemDecoration
 import com.example.kotlin.a01startkotlin.R
 import com.example.kotlin.a01startkotlin.class07.adapter.RecyclerCommonAdapter
-import com.example.kotlin.a01startkotlin.class07.adapter.RecyclerStaggeredAdapter
 import com.example.kotlin.a01startkotlin.class07.bean.RecyclerInfo
 import kotlinx.android.synthetic.main.activity_recycler_staggered.*
 

@@ -5,16 +5,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
+import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.AdapterView.OnItemLongClickListener
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import com.example.kotlin.a01startkotlin.R
 import com.example.kotlin.a01startkotlin.class07.bean.Planet
-
 import org.jetbrains.anko.toast
 
 //ViewHolder中的属性使用关键字lateinit延迟初始化

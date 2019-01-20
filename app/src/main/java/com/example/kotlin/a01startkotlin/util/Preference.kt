@@ -2,7 +2,6 @@ package com.example.kotlin.a01startkotlin.util
 
 import android.content.Context
 import android.content.SharedPreferences
-import java.lang.IllegalArgumentException
 import kotlin.reflect.KProperty
 
 /**

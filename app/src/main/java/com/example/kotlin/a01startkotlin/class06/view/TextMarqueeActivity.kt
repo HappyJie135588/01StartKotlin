@@ -1,8 +1,8 @@
 package com.example.kotlin.a01startkotlin.class06.view
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
 import android.view.Gravity
 import com.example.kotlin.a01startkotlin.R

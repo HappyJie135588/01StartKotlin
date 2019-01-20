@@ -1,9 +1,9 @@
 package com.example.kotlin.a01startkotlin.class07
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.ViewPager
+import android.support.v7.app.AppCompatActivity
 import android.util.TypedValue
 import com.example.kotlin.a01startkotlin.R
 import com.example.kotlin.a01startkotlin.class07.adapter.ImagePagerAdapter

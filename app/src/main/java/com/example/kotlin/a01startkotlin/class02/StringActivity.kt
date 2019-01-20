@@ -1,7 +1,7 @@
 package com.example.kotlin.a01startkotlin.class02
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.example.kotlin.a01startkotlin.R
 import kotlinx.android.synthetic.main.activity_string.*
 

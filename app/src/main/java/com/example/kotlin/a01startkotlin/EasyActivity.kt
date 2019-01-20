@@ -1,7 +1,7 @@
 package com.example.kotlin.a01startkotlin
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_easy.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.toast
