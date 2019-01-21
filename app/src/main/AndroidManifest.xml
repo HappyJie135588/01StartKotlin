@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".MainApplication"
@@ -106,28 +107,31 @@
         <activity android:name=".class08.LoginSQLiteActivity" />
         <activity android:name=".class08.FilePathActivity" />
         <activity android:name=".class08.TextWriteActivity" />
-
         <activity android:name=".class08.TextReadActivity" />
         <activity android:name=".class08.ImageWriteActivity" />
         <activity android:name=".class08.ImageReadActivity" />
         <activity android:name=".class08.AppWriteActivity" />
-
         <activity
             android:name=".class08.MenuOptionActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".class08.ShoppingCartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".class08.ShoppingChannelActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".class08.ShoppingDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".class09.DrawRoundActivity" />
+        <activity android:name=".class09.RunnableActivity" />
+        <activity android:name=".class09.ProgressBarActivity" />
+        <activity android:name=".class09.TextProgressActivity" />
+        <activity android:name=".class09.ProgressAnimationActivity" />
+        <activity android:name=".class09.NotifySimpleActivity" />
+        <activity android:name=".class09.NotifySpecialActivity"/>
+
+        <activity android:name=".class09.NotifyCustomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
